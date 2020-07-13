@@ -1,0 +1,50 @@
+{
+  "name": "react-map-gl-directions",
+  "version": "1.0.0",
+  "description": "React wrapper for @mapbox/mapbox-gl-directions, for use with react-map-gl",
+  "source": "src/index.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write 'src/**/*.js'"
+  },
+  "author": "Neelesh Bisht <neeleshbisht99@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "mapbox",
+    "mapbox-gl",
+    "mapgl",
+    "react-map-gl",
+    "mapbox-gl-directions",
+    "directions",
+    "directions plugin"
+  ],
+  "dependencies": {
+    "@mapbox/mapbox-gl-directions": "^4.0.3",
+    "prop-types": "^15.7.2"
+  },
+  "peerDependencies": {
+    "react-map-gl": ">= 4.0.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.4.0",
+    "eslint-plugin-react": "^7.20.3",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
+    "prettier": "^2.0.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "npm run format",
+      "eslint",
+      "git add"
+    ]
+  }
+}
