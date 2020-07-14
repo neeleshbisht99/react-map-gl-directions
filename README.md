@@ -49,6 +49,7 @@
 - [Installation](#installation)
 - [Styling](#styling)
 - [Features](#features)
+- [Example](#example)
 - [Support](#support)
 - [License](#license)
 
@@ -174,6 +175,8 @@ class Example extends Component {
 
 export default Example
 ```
+
+![react-map-gl-directions example screenshot](react-map-gl-directions.gif)
 
 ## Support
 
