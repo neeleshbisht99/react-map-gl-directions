@@ -5,17 +5,15 @@
   <a href="https://travis-ci.com/visgl/react-map-gl">
     <img src="https://api.travis-ci.com/visgl/react-map-gl.svg?branch=master" alt="build" />
   </a>
-  <a href="https://npmjs.org/package/react-map-gl">
-    <img src="https://img.shields.io/npm/dm/react-map-gl.svg?style=flat-square" alt="downloads" />
+  <a href="http://badges.mit-license.org">
+    <img src="http://img.shields.io/:license-mit-blue.svg?style=flat-square" alt="license" />
   </a>
 </p>
 
 <h1 align="center">react-map-gl-directions | <a href="https://github.com/neeleshbisht99/react-map-gl-directions/blob/master/README.md">Docs</a></h1>
 
 > react-map-gl-directions is a [React](http://facebook.github.io/react/) wrapper for
-> [Mapbox GL Directions](https://github.com/mapbox/mapbox-gl-directions) fore use with react-map-gl[https://github.com/visgl/react-map-gl].
-
-[![Build Status](http://img.shields.io/travis/badges/badgerbadgerbadger.svg?style=flat-square)](https://travis-ci.org/badges/badgerbadgerbadger) [![Dependency Status](http://img.shields.io/gemnasium/badges/badgerbadgerbadger.svg?style=flat-square)](https://gemnasium.com/badges/badgerbadgerbadger) [![Coverage Status](http://img.shields.io/coveralls/badges/badgerbadgerbadger.svg?style=flat-square)](https://coveralls.io/r/badges/badgerbadgerbadger) [![Code Climate](http://img.shields.io/codeclimate/github/badges/badgerbadgerbadger.svg?style=flat-square)](https://codeclimate.com/github/badges/badgerbadgerbadger) [![Github Issues](http://githubbadges.herokuapp.com/badges/badgerbadgerbadger/issues.svg?style=flat-square)](https://github.com/badges/badgerbadgerbadger/issues) [![Pending Pull-Requests](http://githubbadges.herokuapp.com/badges/badgerbadgerbadger/pulls.svg?style=flat-square)](https://github.com/badges/badgerbadgerbadger/pulls) [![Gem Version](http://img.shields.io/gem/v/badgerbadgerbadger.svg?style=flat-square)](https://rubygems.org/gems/badgerbadgerbadger) [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org) [![Badges](http://img.shields.io/:badges-9/9-ff6799.svg?style=flat-square)](https://github.com/badges/badgerbadgerbadger)
+> [Mapbox GL Directions](https://github.com/mapbox/mapbox-gl-directions) for use with [react-map-gl](https://github.com/visgl/react-map-gl).
 
 <!--
 ***INSERT ANOTHER GRAPHIC HERE***
@@ -46,9 +44,7 @@
 ---
 -->
 
-## Table of Contents (Optional)
-
-> If your `README` has a lot of info, section headers might be nice.
+## Table of Contents
 
 - [Installation](#installation)
 - [Styling](#styling)
@@ -78,7 +74,7 @@ Link tag in header:
 
 ```html
 <link
-  href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.2.0/mapbox-gl-geocoder.css"
+  href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.0.0/mapbox-gl-directions.css"
   rel="stylesheet"
 />
 ```
@@ -91,7 +87,7 @@ Only `mapRef` and `mapboxApiAccessToken` are required.
 | ---------------------- | -------- | --------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | mapRef                 | Object   |                                         | Ref for react-map-gl map component.                                                                                                                                                                       |
 | mapboxApiAccessToken   | String   |                                         | https://www.mapbox.com/                                                                                                                                                                                   |
-| position               | String   | "top-right"                             | Position on the map to which the geocoder control will be added. Valid values are `"top-left"`, `"top-right"`, `"bottom-left"`, and `"bottom-right"`.                                                     |
+| position               | String   | "top-right"                             | Position on the map to which the directions plugin control will be added. Valid values are `"top-left"`, `"top-right"`, `"bottom-left"`, and `"bottom-right"`.                                            |
 | api                    | String   | "https://api.mapbox.com/directions/v5/" | Override default routing endpoint url.                                                                                                                                                                    |
 | interactive            | Boolean  | true                                    | Enable/Disable mouse or touch interactivity from the plugin.                                                                                                                                              |
 | profile                | String   | "mapbox/driving-traffic"                | Routing profile to use. Options: mapbox/driving-traffic, mapbox/driving, mapbox/walking, mapbox/cycling.                                                                                                  |
@@ -104,10 +100,10 @@ Only `mapRef` and `mapboxApiAccessToken` are required.
 | controls               | Object   |                                         | Hide or display inputs, instructions and profile switch controls.                                                                                                                                         |
 | zoom                   | Number   | 16                                      | If no bbox exists from the geocoder result, the zoom you set here will be used in the flyTo.                                                                                                              |
 | placeholderOrigin      | String   | "Choose a starting place"               | If set, this text will appear as the placeholder attribute for the origin input element.                                                                                                                  |
-| placeholderDestination | String   | "Choose destination"                    | If set, this text will appear as the placeholder attribute for the destination input. element.                                                                                                            |
+| placeholderDestination | String   | "Choose destination"                    | If set, this text will appear as the placeholder attribute for the destination input element.                                                                                                             |
 | flyTo                  | Boolean  | true                                    | If false, animating the map to a selected result is disabled.                                                                                                                                             |
 | exclude                | String   | null                                    | Exclude certain road types from routing. The default is to not exclude anything. Options: ferry, toll, motorway.                                                                                          |
-| onInit                 | Function | () => {}                                | Is passed Mapbox geocoder instance as param and is executed after Mapbox geocoder is initialized.                                                                                                         |
+| onInit                 | Function | () => {}                                | Is passed Mapbox directions instance as param and is executed after Mapbox directions plugin is initialized.                                                                                              |
 | onClear                | Function | () => {}                                | Is passed `{ type: }` as a param and type is one of 'origin' or 'destination'. Fired when input is cleared.                                                                                               |
 | onLoading              | Function | () => {}                                | Is passed `{ type: }` as a param and type is one of 'origin' or 'destination'. Fired when either origin or destination is loading.                                                                        |
 | onOrigin               | Function | () => {}                                | Is passed `{ feature }` Fired when origin is set.                                                                                                                                                         |
@@ -123,7 +119,6 @@ Reach out to me at one of the following places!
 - Linkedin at <a href="https://www.linkedin.com/in/neelesh-bisht-398061b4/" target="_blank">`Neelesh Bisht`</a>
 - Mail at <a href="mailto:neelesbisht99@gmail.com" target="_blank">`neeleshbisht99@gmail.com`</a>
 - Twitter at <a href="https://twitter.com/neeleshbisht99" target="_blank">`@neeleshbisht99`</a>
-- Insert more social links here.
 
 ## License
 
