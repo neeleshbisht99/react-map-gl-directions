@@ -37,6 +37,7 @@ class Directions extends PureComponent {
       zoom,
       placeholderOrigin,
       placeholderDestination,
+      flyTo,
       exclude,
       onInit,
     } = this.props
@@ -55,6 +56,7 @@ class Directions extends PureComponent {
       zoom,
       placeholderOrigin,
       placeholderDestination,
+      flyTo,
       exclude,
     }
 
@@ -151,6 +153,7 @@ class Directions extends PureComponent {
     zoom: PropTypes.number,
     placeholderOrigin: PropTypes.string,
     placeholderDestination: PropTypes.string,
+    flyTo: PropTypes.bool,
     exclude: PropTypes.bool,
     onInit: PropTypes.func,
     onClear: PropTypes.func,
@@ -178,9 +181,3 @@ class Directions extends PureComponent {
   }
 }
 export default Directions
-
-/*
-check for flyTo props
-And also for ContainerRef
-
-*/
