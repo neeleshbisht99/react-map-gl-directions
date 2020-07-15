@@ -1,6 +1,6 @@
 {
   "name": "react-map-gl-directions",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "React wrapper for @mapbox/mapbox-gl-directions, for use with react-map-gl",
   "source": "src/index.js",
   "main": "dist/index.js",
