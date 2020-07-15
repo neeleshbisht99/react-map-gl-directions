@@ -167,7 +167,6 @@ class Directions extends PureComponent {
 
   static defaultProps = {
     position: 'top-right',
-    api: 'https://api.mapbox.com/directions/v5/mapbox/',
     zoom: 16,
     profile: 'walking',
     onInit: () => {},
