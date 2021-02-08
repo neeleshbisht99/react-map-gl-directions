@@ -10,7 +10,7 @@
   </a>
 </p>
 
-<h1 align="center">react-map-gl-directions | <a href="https://github.com/neeleshbisht99/react-map-gl-directions/blob/master/README.md">Docs</a></h1>
+<h1 align="center">react-map-gl-directions | <a href="https://github.com/neeleshbisht99/react-map-gl-directions/blob/master/README.md">Docs(Deprecated)</a></h1>
 
 > react-map-gl-directions is a [React](http://facebook.github.io/react/) wrapper for
 > [Mapbox GL Directions](https://github.com/mapbox/mapbox-gl-directions) for use with [react-map-gl](https://github.com/visgl/react-map-gl).
